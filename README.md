@@ -1,6 +1,8 @@
 ¿Con cuántos elementos quedó la pila?
 La pila finalizó su ejecución con exactamente 2 elementos en su interior. El puntero TOPE concluyó con un valor final de 2.
 El primer elemento, posicionado en la base de la pila, es la letra 'V'; el segundo elemento, ubicado en la cima de la pila y apuntado directamente por el TOPE, es la letra 'R'. Este estado final se alcanza porque las operaciones de eliminación correspondientes a los incisos "c" y "d" vaciaron la memoria de la estructura por completo, reiniciando el TOPE a 0. Posteriormente, las inserciones de los incisos "f" (V) y "g" (W) elevaron el TOPE a 2, la eliminación del inciso "h" extrajo a (W) reduciendo el TOPE a 1, y la inserción final del inciso "i" introdujo a (R), fijando el TOPE definitivo en 2.
+
+
 ¿Hubo algún caso de error (desbordamiento o subdesbordamiento)? Si ocurrió algún error, explícalo.
 Sí, ocurrió un error específico de subdesbordamiento (Underflow).
 Este fallo lógico se presentó de manera exacta durante la ejecución de la instrucción "e. Eliminar (PILA, U)". La secuencia técnica que desencadenó el error es la siguiente:
