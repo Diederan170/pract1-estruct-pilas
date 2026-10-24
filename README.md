@@ -1,0 +1,11 @@
+¿Con cuántos elementos quedó la pila?
+La pila finalizó su ejecución con exactamente 2 elementos en su interior. El puntero TOPE concluyó con un valor final de 2.
+El primer elemento, posicionado en la base de la pila, es la letra 'V'; el segundo elemento, ubicado en la cima de la pila y apuntado directamente por el TOPE, es la letra 'R'. Este estado final se alcanza porque las operaciones de eliminación correspondientes a los incisos "c" y "d" vaciaron la memoria de la estructura por completo, reiniciando el TOPE a 0. Posteriormente, las inserciones de los incisos "f" (V) y "g" (W) elevaron el TOPE a 2, la eliminación del inciso "h" extrajo a (W) reduciendo el TOPE a 1, y la inserción final del inciso "i" introdujo a (R), fijando el TOPE definitivo en 2.
+¿Hubo algún caso de error (desbordamiento o subdesbordamiento)? Si ocurrió algún error, explícalo.
+Sí, ocurrió un error específico de subdesbordamiento (Underflow).
+Este fallo lógico se presentó de manera exacta durante la ejecución de la instrucción "e. Eliminar (PILA, U)". La secuencia técnica que desencadenó el error es la siguiente:
+1.	Durante el paso "c", la estructura ejecutó la extracción del elemento 'Y', reduciendo el valor del TOPE de 2 a 1.
+2.	Durante el paso "d", la estructura ejecutó la extracción del elemento 'X', reduciendo el valor del TOPE de 1 a 0. En este punto de la ejecución, la pila quedó absolutamente vacía.
+3.	Durante el paso "e", el programa intentó ejecutar una nueva operación de extracción para asignar un valor a la variable 'U'.
+El subdesbordamiento se define como la violación de memoria que ocurre cuando se intenta ejecutar una operación de lectura o extracción (Pop) sobre una estructura de datos cuyo contador de elementos (TOPE) es igual a 0. Dado que no existe información almacenada en los índices de memoria correspondientes, el sistema carece de un valor para retornar.
+Por otro lado, no existió ningún caso de desbordamiento (Overflow) durante el ejercicio. La estructura fue inicializada con una capacidad máxima delimitada a 8 elementos. ocupación alcanzadaiento de todos los incisos, el nivel máximo de ocupación alcanzado fue un TOPE de 2. El límite superior de almacenamiento nunca estuvo cerca de ser superado.
